@@ -16,7 +16,7 @@ class Remote {
     }
 }
 
-// without this inheritance this became strategy pattern
+// without this inheritance this become strategy pattern
 class AdvancedRemote {
     constructor(device) {
         super(device);
