@@ -50,8 +50,9 @@ class Device {
     }
 }
 
-class TV {
+class TV extends Device{
     constructor() {
+        super();
         this.isEnabled = false;
         this.volume = 0;
     }

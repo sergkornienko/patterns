@@ -35,6 +35,7 @@ class CarDecorator {
 
 class TransmitionPriceDecorator extends CarDecorator {
     constructor(car) {
+        super();
         this.car = car;
     }
 
@@ -50,6 +51,7 @@ class TransmitionPriceDecorator extends CarDecorator {
 
 class LeatherInteriorDecorator extends CarDecorator {
     constructor(car) {
+        super();
         this.car = car;
     }
 

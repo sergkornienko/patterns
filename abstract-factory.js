@@ -9,6 +9,7 @@ class Button {
 
 class WindowsButton extends Button {
     constructor(x, y) {
+        super();
         this.positionX = x;
         this.positionY = y;
     }
@@ -22,6 +23,7 @@ class WindowsButton extends Button {
 
 class MacButton extends Button {
     constructor(x, y) {
+        super();
         this.positionX = x;
         this.positionY = y;
     }
@@ -44,6 +46,7 @@ class Dialog {
 
 class WindowsDialog extends Dialog {
     constructor(x, y) {
+        super();
         this.positionX = x;
         this.positionY = y;
     }
@@ -57,6 +60,7 @@ class WindowsDialog extends Dialog {
 
 class MacDialog extends Dialog {
     constructor(x, y) {
+        super();
         this.positionX = x;
         this.positionY = y;
     }
@@ -78,6 +82,10 @@ class UIFactory {
 }
 
 class WindowsUIFactory extends UIFactory {
+    constructor(size) {
+        super();
+        this.size = size;
+    }
     createButton(x, y) {
         // here is some additional logic
         return new WindowsButton(x, y);
@@ -90,10 +98,15 @@ class WindowsUIFactory extends UIFactory {
 
 class MacUIFactory extends UIFactory {
     constructor(size) {
+        super();
         this.size = size;
     }
     createButton(x, y) {
         // here is some additional specific for Macs logic
+        return new MacButton(x, y);
+    }
+    createDialog(x, y) {
+        // here is some additional logic
         return new MacDialog(x, y);
     }
 }
